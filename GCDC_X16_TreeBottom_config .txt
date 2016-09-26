@@ -1,0 +1,31 @@
+;X16-1D config file
+; Tree Bottom Configuration 
+; Pacific Standard Time (UTC-8) no daylight
+; time stamp initialized with a separate real time clock file - see manual
+
+; modified by J.Marshall 25 Sept 2016
+
+; sample rate in is herz
+samplerate = 12
+
+; deadband defines acceleration threshold below which data is not recorded
+; conversion factor is 1g=2048 counts
+deadband = 10
+
+;num of samples recorded after deadband threshold is exceeded
+;records one minutes of data
+dwell = 720
+
+;specifies the period (#of secs) when data is recorded regardless of db setting
+;right now set for one hour 
+deadbandtimeout = 3600
+
+; number of records per file 
+; files are CSV - only size limit size is if using excel (10^6)
+; current file size is set for one file/day
+samplesperfile = 1036800
+
+; LEDs on
+statusindicators = normal
+
+
